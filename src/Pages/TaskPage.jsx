@@ -17,7 +17,7 @@ import { fetchTasks, addTask, deleteTask, updateTask } from '../store/taskSlice'
 import { fetchProjects } from '../store/projectSlice';
 import { fetchAssignees } from '../store/assigneeSlice';
 import { setSelectedProject } from "../store/projectFilterSlice";
-import Leftsidebar from '../component/leftsidebar';
+import Leftsidebar from '../component/Leftsidebar';
 
 
 const TaskPage = () => {
