@@ -8,7 +8,7 @@ import ProjectPage from "./Pages/ProjectPage";
 import TaskPage from "./Pages/TaskPage";
 import LoginPage from "./layout/LoginPage";
 import Signup from "./layout/Signup";
-import SideWithNav from "./layout/SideWithNav";
+import SideWithNav from "./Layout/SideWithNav";
 import ErrorPage from "./Pages/ErrorPage";
 
 const ProtectedRoute = ({ children }) => {
