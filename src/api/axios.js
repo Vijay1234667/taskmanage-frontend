@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://taskmanage-api-backend-2.onrender.com",
 });
 
 // Add a request interceptor to include JWT

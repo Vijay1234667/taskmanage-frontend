@@ -15,7 +15,7 @@ const AssigneesPages = () => {
     const user = JSON.parse(localStorage.getItem("user"));
 const token = localStorage.getItem("token");
 
-const res = await axios.get('http://localhost:5000/assignees', {
+const res = await axios.get('https://taskmanage-api-backend-2.onrender.com/assignees', {
   headers: { Authorization: `Bearer ${token}` },
 });
 
@@ -32,7 +32,7 @@ const res = await axios.get('http://localhost:5000/assignees', {
     try {
       const token = localStorage.getItem("token"); // get the JWT from localStorage
 
-      await axios.delete(`http://localhost:5000/assignees/${id}`, {
+      await axios.delete(`https://taskmanage-api-backend-2.onrender.com/assignees/${id}`, {
         headers: { Authorization: `Bearer ${token}` }, // include JWT
       });
 

@@ -34,7 +34,7 @@ const SignupPage = () => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/register', formData);
+      const res = await axios.post('https://taskmanage-api-backend-2.onrender.com/register', formData);
       if (res.data.success) {
         setSuccess("Signup successful!");
         setFormData({ name: '', email: '', password: '' });

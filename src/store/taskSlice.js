@@ -9,7 +9,7 @@ export const fetchTasks = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/tasks", {
+      const res = await axios.get("https://taskmanage-api-backend-2.onrender.com/tasks", {
         headers: { Authorization: `Bearer ${token}` },
       });
       return res.data;
@@ -99,7 +99,7 @@ export const updateTask = createAsyncThunk(
       console.log("📦 Sending payload to Flask:", payload);
 
       const res = await axios.put(
-        `http://localhost:5000/tasks/${taskData.id}`,
+        `https://taskmanage-api-backend-2.onrender.com/tasks/${taskData.id}`,
         payload,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -123,7 +123,7 @@ export const deleteTask = createAsyncThunk(
       const token = localStorage.getItem("token");
       const user = JSON.parse(localStorage.getItem("user"));
 
-      const res = await axios.delete(`http://localhost:5000/tasks/${taskId}`, {
+      const res = await axios.delete(`https://taskmanage-api-backend-2.onrender.com/tasks/${taskId}`, {
   headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
   data: { username: user.name, role: user.role },
 });

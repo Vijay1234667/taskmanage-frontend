@@ -12,7 +12,7 @@
 //     setMessage('');
 //     setError('');
 //     try {
-//       const res = await axios.post('http://localhost:5000/forgot-password', { email });
+//       const res = await axios.post('https://taskmanage-api-backend-2.onrender.com/forgot-password', { email });
 //       setMessage(res.data.message);
 //     } catch (err) {
 //           console.error("Signup Error:", err);  // ← Add this

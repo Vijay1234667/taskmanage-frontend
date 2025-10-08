@@ -146,7 +146,7 @@ const TaskPage = () => {
     const token = localStorage.getItem("token");
 
     try {
-        const res = await axios.delete(`http://localhost:5000/tasks/${taskId}`, {
+        const res = await axios.delete(`https://taskmanage-api-backend-2.onrender.com/tasks/${taskId}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
                 "Content-Type": "application/json",
